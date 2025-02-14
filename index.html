@@ -9,25 +9,17 @@
       body {
         margin: 0;
         padding: 0;
-        background: url("web1.jpg") no-repeat center center/cover;
+        background: url("web2.jpg") no-repeat center center/cover;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-
       .animated-button {
-        padding: 1vh 2vw; /* Reduced padding */
-        color: rgb(255, 255, 255);
-        background: linear-gradient(45deg, #f3d889, #904212);
-        border: 2px solid white; /* Reduced border thickness */
         border-radius: 50px; /* Slightly smaller border radius */
         cursor: pointer;
         position: relative;
         transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-        font-family: "Kantumruy Pro", Courier, monospace;
-        font-weight: bold;
-        font-size: max(1.8vw, 16px); /* Slightly smaller font */
         text-decoration: none;
         text-align: center;
         display: inline-block;
@@ -38,7 +30,7 @@
 
       .animated-button:hover {
         transform: scale(1.1);
-        background: linear-gradient(45deg, #904212, #f3d889);
+        /* background: linear-gradient(45deg, #fcc715, rgb(253, 199, 36));*/
       }
 
       @keyframes pulse {
@@ -70,8 +62,8 @@
     </style>
   </head>
   <body>
-    <a href="https://afb883.asia/hk" class="animated-button" target="_blank">
-      加 入 遊 戲
+    <a href="https://afb883.asia/hk" target="_blank">
+      <img src="button.png" alt="Join Game" class="animated-button" />
     </a>
   </body>
 </html>
