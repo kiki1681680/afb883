@@ -15,8 +15,9 @@
         justify-content: center;
         align-items: center;
       }
+
       .animated-button {
-        padding: 10px 50px;
+        padding: 10px 5vw; /* Adjust padding for responsiveness */
         color: rgb(0, 0, 0);
         background: linear-gradient(45deg, #f3d889, #904212);
         border: 3px solid white;
@@ -26,16 +27,19 @@
         transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
         font-family: "Kantumruy Pro", Courier, monospace;
         font-weight: bold;
-        font-size: 40px;
+        font-size: 4vw; /* Responsive font size */
         text-decoration: none;
         text-align: center;
         display: inline-block;
         animation: pulse 1.5s infinite;
+        white-space: nowrap; /* Prevents button text from breaking */
       }
+
       .animated-button:hover {
         transform: scale(1.1);
         background: linear-gradient(45deg, #904212, #f3d889);
       }
+
       @keyframes pulse {
         0% {
           transform: scale(1);
@@ -45,6 +49,21 @@
         }
         100% {
           transform: scale(1);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .animated-button {
+          font-size: 6vw; /* Increase font size for smaller screens */
+          padding: 10px 10vw;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .animated-button {
+          font-size: 8vw;
+          padding: 15px 12vw;
         }
       }
     </style>
