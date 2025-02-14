@@ -17,23 +17,23 @@
       }
 
       .animated-button {
-        padding: 2vh 5vw; /* Adjust padding dynamically */
+        padding: 1vh 2vw; /* Reduced padding */
         color: rgb(255, 255, 255);
         background: linear-gradient(45deg, #f3d889, #904212);
-        border: 3px solid white;
-        border-radius: 100px;
+        border: 2px solid white; /* Reduced border thickness */
+        border-radius: 50px; /* Slightly smaller border radius */
         cursor: pointer;
         position: relative;
         transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
         font-family: "Kantumruy Pro", Courier, monospace;
         font-weight: bold;
-        font-size: max(2vw, 20px); /* Ensures it's readable on large screens */
+        font-size: max(1.8vw, 16px); /* Slightly smaller font */
         text-decoration: none;
         text-align: center;
         display: inline-block;
         animation: pulse 1.5s infinite;
-        white-space: nowrap; /* Prevents button text from breaking */
-        min-width: 200px; /* Prevents button from becoming too small */
+        white-space: nowrap;
+        min-width: 160px; /* Smaller minimum width */
       }
 
       .animated-button:hover {
@@ -46,7 +46,7 @@
           transform: scale(1);
         }
         50% {
-          transform: scale(1.1);
+          transform: scale(1.05); /* Reduced pulse effect */
         }
         100% {
           transform: scale(1);
@@ -56,15 +56,15 @@
       /* Responsive Design */
       @media (max-width: 768px) {
         .animated-button {
-          font-size: max(4vw, 18px); /* Ensures good readability */
-          padding: 2vh 8vw;
+          font-size: max(3.5vw, 14px); /* Slightly smaller on tablets */
+          padding: 1vh 4vw;
         }
       }
 
       @media (max-width: 480px) {
         .animated-button {
-          font-size: max(6vw, 16px);
-          padding: 2.5vh 10vw;
+          font-size: max(5vw, 12px); /* Smaller for mobile */
+          padding: 1.3vh 6vw;
         }
       }
     </style>
