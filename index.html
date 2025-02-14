@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFB883</title>
+    <link rel="icon" href="AFB883BG@2x.png" type="image/png" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url("web1.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .animated-button {
+        padding: 10px 50px;
+        color: rgb(0, 0, 0);
+        background: linear-gradient(45deg, #f3d889, #904212);
+        border: 3px solid white;
+        border-radius: 100px;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+        font-family: "Kantumruy Pro", Courier, monospace;
+        font-weight: bold;
+        font-size: 40px;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        animation: pulse 1.5s infinite;
+      }
+      .animated-button:hover {
+        transform: scale(1.1);
+        background: linear-gradient(45deg, #904212, #f3d889);
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://afb883.asia/hk" class="animated-button" target="_blank">
+      加 入 遊 戲
+    </a>
+  </body>
+</html>
