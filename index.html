@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AFB883</title>
     <link rel="icon" href="AFB883BG@2x.png" type="image/png" />
+
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         margin: 0;
@@ -15,55 +22,48 @@
         justify-content: center;
         align-items: center;
       }
-      .animated-button {
-        border-radius: 50px; /* Slightly smaller border radius */
-        cursor: pointer;
-        position: relative;
-        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-        text-decoration: none;
-        text-align: center;
-        display: inline-block;
-        animation: pulse 1.5s infinite;
-        white-space: nowrap;
-        min-width: 160px; /* Smaller minimum width */
+
+      /* Animated Button */
+      .btn-custom img {
+        width: 200px; /* Default button size */
+        height: auto;
+        transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+        animation: pulse 1.5s infinite ease-in-out alternate;
       }
 
-      .animated-button:hover {
-        transform: scale(1.1);
-        /* background: linear-gradient(45deg, #fcc715, rgb(253, 199, 36));*/
+      /* Hover Effect (Enlarges + Smooth Transition) */
+      .btn-custom:hover img {
+        transform: scale(1.2); /* Less aggressive scaling */
       }
 
+      /* Keyframe Animation (Smooth Pulse) */
       @keyframes pulse {
         0% {
           transform: scale(1);
         }
         50% {
-          transform: scale(1.05); /* Reduced pulse effect */
+          transform: scale(
+            1.08
+          ); /* Slightly larger for smooth breathing effect */
         }
         100% {
           transform: scale(1);
         }
       }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .animated-button {
-          font-size: max(3.5vw, 14px); /* Slightly smaller on tablets */
-          padding: 1vh 4vw;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .animated-button {
-          font-size: max(5vw, 12px); /* Smaller for mobile */
-          padding: 1.3vh 6vw;
-        }
-      }
     </style>
   </head>
   <body>
-    <a href="https://afb883.asia/?rc=ADSHK883" target="_blank">
-      <img src="button.png" alt="Join Game" class="animated-button" />
-    </a>
+    <div class="container d-flex justify-content-center align-items-center">
+      <a
+        href="https://afb883.asia/?rc=ADSHK883"
+        target="_blank"
+        class="btn-custom"
+      >
+        <img src="button.png" alt="Join Game" />
+      </a>
+    </div>
+
+    <!-- Bootstrap JavaScript (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
